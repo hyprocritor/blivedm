@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import dataclasses
 from typing import *
-
 __all__ = (
     'DanmakuMessage',
     'GiftMessage',

@@ -56,7 +56,6 @@ class OpenLiveClient(ws_base.WebSocketClientBase):
         self._app_id = app_id
         self._room_owner_auth_code = room_owner_auth_code
         self._game_heartbeat_interval = game_heartbeat_interval
-
         # 在调用init_room后初始化的字段
         self._room_owner_uid: Optional[int] = None
         """主播用户ID"""
@@ -157,7 +156,7 @@ class OpenLiveClient(ws_base.WebSocketClientBase):
 
         if self._game_id != '' and self._game_heartbeat_timer_handle is None:
             self._game_heartbeat_timer_handle = asyncio.get_running_loop().call_later(
-                self._game_heartbeat_interval, self._on_send_game_heartbeat
+                self._game_heartbeat_interval, self._on_send_game_heartbeat,
             )
         return True
 

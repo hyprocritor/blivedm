@@ -107,6 +107,7 @@ class DanmakuMessage:
 
     privilege_type: int = 0
     """舰队类型，0非舰队，1总督，2提督，3舰长"""
+    accompany: int = 0
 
     @classmethod
     def from_command(cls, info: list):
@@ -172,6 +173,7 @@ class DanmakuMessage:
             title=title,
 
             privilege_type=info[7],
+            accompany=info[8],
         )
 
     @property
