@@ -60,7 +60,7 @@ class DanmakuMessage:
             room_id=data['room_id'],
             msg=data['msg'],
             msg_id=data['msg_id'],
-            guard_level=data['guard_image'],
+            guard_level=data['guard_level'],
             fans_medal_wearing_status=data['fans_medal_wearing_status'],
             fans_medal_name=data['fans_medal_name'],
             fans_medal_level=data['fans_medal_level'],
